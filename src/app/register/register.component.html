@@ -1,0 +1,99 @@
+<body>
+    <div class="loginBox">
+        <img class="user" src="../../assets/images/student1.png">
+        <h2>REGISTER</h2>
+        <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+            <input ngModel type="text" name="userFirstName" placeholder="firstname" required>
+
+            <input ngModel type="text" name="userLastName" placeholder="lastname" required>
+
+            <input ngModel type="text" name="userName" placeholder="username" required>
+
+            <div class="inputsss">
+                <input ngModel type="password" name="userPassword" placeholder="password" required
+                    [type]="hide ? 'password' : 'text'" value="enter username" #message>
+                <button class="btnn" mat-icon-button matSuffix (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" style="color: white; display: flex;">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </div>
+
+            <input class="w-20 text-center" type="submit" mat-raised-button color="primary" value="Register">
+
+            <!-- <div class="form-inline">
+                <a id="forget" class="font-weight-bold">forget password?</a>
+            </div> -->
+
+            <!-- <input type="submit" name="sign-in" value="Sign In">
+            <div class="text-center">
+            </div> -->
+
+        </form>
+
+        <!-- <div class="mx-3 my-2 py-2 bordert">
+            <div class="text-center py-3">
+                <a href="http://www.facebook.com" target="_blank" class="px-2"><img src="https://www.dpreview.com/files/p/articles/4698742202/facebook.jpeg" alt=""></a>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card" style="padding: 20px;">
+                <div class="card-header">
+                    <font [size]="+6" style="align-items: center;">Register Form</font>
+                </div>
+                <div class="card-body">
+                    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+
+                        <div class="text-center">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>UserName</mat-label>
+                                <input matInput ngModel name="userName" id="userName" placeholder="username">
+                            </mat-form-field>
+                        </div>
+                    
+                        <div class="text-center">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>UserFirstName</mat-label>
+                                <input matInput ngModel name="userFirstName" id="userFirstName" placeholder="userfirstname">
+                            </mat-form-field>
+                        </div>
+                    
+                        <div class="text-center">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>UserLastName</mat-label>
+                                <input matInput ngModel name="userLastName" id="userLastName" placeholder="username">
+                            </mat-form-field>
+                        </div>
+                    
+                        <div class="text-center">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>UserPassword</mat-label>
+                                <input matInput ngModel type="password" name="userPassword" id="userPassword" placeholder="userpassword">
+                            </mat-form-field>
+                        </div>
+                    
+                        <div class="text-center">
+                            <button class="w-20 text-center" type="submit" mat-raised-button color="primary">Register</button>
+                        </div>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   -->

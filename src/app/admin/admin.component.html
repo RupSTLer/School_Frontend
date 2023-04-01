@@ -1,0 +1,91 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+        <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+    </button>
+    ADMIN DASHBOARD
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+        <img class="avatar mat-elevation-z8" src="../../assets/images/admin.png" />
+
+        <h4 class="name">John Smith</h4>
+        <p class="designation">Admin</p>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button text-white" routerLink="/home">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-button class="menu-button text-white" routerLink="/adminProfile">
+            <mat-icon>person</mat-icon>
+            <span>Profile</span>
+        </button>
+        <button mat-button class="menu-button text-white" routerLink="/about">
+            <mat-icon>info</mat-icon>
+            <span>About</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button text-white" routerLink="/help">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+            
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-4 col-xl-3">
+                    <div class="card bg-c-blue order-card">
+                      <div class="card-block">
+                        <h6 class="m-b-20">Total Teacher</h6>
+                        <h2 class="text-right"><i class="fa fa-chalkboard-teacher f-left"></i><span>{{countTea}}</span></h2>
+                        <p class="m-b-0">Pending Teacher<span class="f-right"></span></p>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="col-md-4 col-xl-3">
+                    <div class="card bg-c-green order-card">
+                      <div class="card-block abc">
+                        <h2 class="m-b-20"><i class="fa fa-user"></i>Total Student: {{countStu}}</h2>
+                        <!-- <h2 class="text-right"><i class="fas fa-user-graduate f-left"></i><span>{{countStu}}</span></h2> -->
+                        <!-- <button (click)="countStudent()">click2</button> -->
+                        <!-- <p class="m-b-0">Pending Students<span class="f-right">{{pendingstudentcount}}</span></p> -->
+                        <p class="m-b-0">Pending Students<span class="f-right"></span></p>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="col-md-4 col-xl-3">
+                    <div class="card bg-c-yellow order-card">
+                      <div class="card-block">
+                        <h6 class="m-b-20">Teachers Salary</h6>
+                        <h2 class="text-right"><i class="fas fa-search-dollar f-left"></i><span></span></h2>
+                        <p class="m-b-0">Pending Salary<span class="f-right"></span></p>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="col-md-4 col-xl-3">
+                    <div class="card bg-c-pink order-card">
+                      <div class="card-block">
+                        <h6 class="m-b-20">Student Fee</h6>
+                        <h2 class="text-right"><i class="fas fa-search-dollar f-left"></i><span></span></h2>
+                        <p class="m-b-0">Pending Dues<span class="f-right"></span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- https://github.com/thisiszoaib/angular-responsive-sidebar/blob/master/src/app/app.component.ts -->

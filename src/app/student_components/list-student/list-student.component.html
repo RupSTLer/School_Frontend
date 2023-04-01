@@ -1,0 +1,31 @@
+<div class="container">
+
+<br>
+<h2> Student List </h2>
+<table class="table table-stripped">
+    <thead>
+       <tr>
+        <th> ID </th>
+        <th> UserName </th>
+        <th> Name </th>
+        <th> Email </th>
+        <th> Actions </th>
+       </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td> {{student.id}} </td>
+            <td> {{student.userName}} </td>
+            <td> {{student.name}} </td>
+            <td> {{student.email}} </td>
+            <td>
+                <!-- <button routerLink="/updateEmployee/{{employee.id}}" class="btn btn-info">Update</button> -->
+                <!-- <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left:10px">Delete</button> -->
+                <button routerLink="/updateStudent/{{student.id}}" style="max-height: 40px; max-width: 50px;" class="btn btn-primary" aria-label="Example icon button with a edit icon" ><mat-icon>edit</mat-icon></button>
+                <button (click)="deleteStudent(student.id)" style="margin-left:10px; max-height: 40px; max-width: 50px;" class="btn btn-danger" aria-label="Example icon button with a delete icon"><mat-icon>delete</mat-icon></button>
+                <button (click)="studentDetails(student.id)" style="margin-left:10px; max-height: 40px; max-width: 50px;" class="btn btn-dark" aria-label="Example icon button with a visibility icon"><mat-icon>visibility</mat-icon></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

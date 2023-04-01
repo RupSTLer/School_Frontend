@@ -1,0 +1,80 @@
+<!-- <div class="wrapper">
+    <div class="page-header" style="background-image: url('../../../assets/images/1.jpg');">
+         <div class="filter"></div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="text-center" style="font-size:xx-large">Update Details</h1>
+                        </div>
+                        <div class="card-body">
+                            <form>
+        
+                                <div>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Student ID</mat-label>
+                                        <input matInput ngModel type="text" name="id" id="id" placeholder="Enter student id">
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Student Name</mat-label>
+                                        <input matInput ngModel type="text" name="fullName" id="fullName" placeholder="Enter student name">
+                                    </mat-form-field>
+                                </div>
+                                <!-- <div>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Student Gender</mat-label>
+                                        <!-- <input matInput ngModel type="text" name="gender" id="gender" placeholder="Enter student gender"> 
+                                        <select matInput>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>NotToSay</option>
+                                        </select>
+                                    </mat-form-field>
+                                </div> 
+        
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="col-md-6 offset-md-3">
+    <h3>Add Student</h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label>Student ID</label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="student.id" name="id">
+        </div>
+
+        <div class="form-group">
+            <label>Student UserName</label>
+            <input type="text" class="form-control" id="userName" [(ngModel)]="student.userName" name="userName">
+        </div>
+
+        <div class="form-group">
+            <label>Student Password</label>
+            <input type="password" class="form-control" id="password" [(ngModel)]="student.password" name="password">
+        </div>
+
+        <div class="form-group">
+            <label>Student Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="student.name" name="name">
+        </div>
+        
+        <div class="form-group">
+            <label>Email ID</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="student.email" name="email"><mat-icon>email</mat-icon>
+        </div>
+        <br>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>
+
+
